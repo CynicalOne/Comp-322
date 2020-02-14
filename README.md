@@ -16,3 +16,13 @@ Second Commit 2-7-2020
 	
 	Project Status: Assignment is complete. 
 	
+Third Commit 2-14-2020
+	Removed extraneous files and folders created when first learning git.
+	
+Fourth Commit 2-14-2020
+	Fixed programs based on new project specifications
+	no longer prompts user for binary value, user now must add binary value or file name as an argument. User may also have a '- ' before writing the binary out into stdin.
+	changed the conditions for the major if statements, from args < 2 or not, to if the file has been read or not.
+	Calculations and overall design stayed the same
+	
+	Project Status: Assignment is complete based on clarified specifications

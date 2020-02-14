@@ -1,3 +1,3 @@
 ALL:
-	gcc -c p1.c -Wall -Wextra
-	gcc -o p1 p1.o  -lm
+	gcc -c lab0.c -Wall -Wextra
+	gcc -o lab0 lab0.o  -lm
