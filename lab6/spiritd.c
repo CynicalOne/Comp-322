@@ -95,8 +95,7 @@ void sighandler(int signum)
 			char *args[4];
 			args[0] = moleDir;
 			args[1] = moleNumber;
-			args[2] = moleDir2;
-			args[3] = NULL;
+			args[2] = NULL;
 			execve(args[0], args, NULL);
 			
 		}
