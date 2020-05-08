@@ -24,5 +24,6 @@ int main(int argc, char *argv[])
 	pageNumber = address / 4096;
 	offset = address % 4096;
 	printf("the address %ld contains: \npage number = %ld \noffset = %ld\n", address, pageNumber, offset);
+	return 0;
 }
 
