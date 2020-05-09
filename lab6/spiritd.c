@@ -13,6 +13,7 @@ void sighandler(int signum);
 
 pid_t mole;
 char* moleDir;
+char logfileDir[1024];
 
 int main()
 {
@@ -22,7 +23,9 @@ int main()
 	//saves the absolute directory of moles
 	char buffer[1024];
 	moleDir = getcwd(buffer, 1024);
+	strcpy(logfileDir, moleDir);
 	strcat(moleDir, "/moles");
+	strcat(logfileDir, "/lab6.txt");
 	
 	//file creation mask to 0
 	umask(0);
@@ -95,7 +98,8 @@ void sighandler(int signum)
 			char *args[4];
 			args[0] = moleDir;
 			args[1] = moleNumber;
-			args[2] = NULL;
+			args[2] = logfileDir;
+			args[3] = NULL;
 			execve(args[0], args, NULL);
 			
 		}
