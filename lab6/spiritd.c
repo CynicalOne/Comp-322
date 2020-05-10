@@ -81,20 +81,21 @@ void sighandler(int signum)
 	if(signum == SIGTERM){
 		exit(EXIT_SUCCESS);
 	}
+	
+	char *moleNumber;
+	int random = rand() % 2;
+	if(random == 1){
+		moleNumber = "mole1";
+	}
+	else{
+		moleNumber = "mole2";
+	}
+	
 	if(signum == SIGUSR1 || signum == SIGUSR2){
 		pid_t child1;
 		child1 = fork();
 		
 		if(child1 == 0){	//child process
-			char *moleNumber;
-			int random = rand() % 2;
-			if(random == 1){
-				moleNumber = "mole1";
-			}
-			else{
-				moleNumber = "mole2";
-			}
-			
 			char *args[4];
 			args[0] = moleDir;
 			args[1] = moleNumber;

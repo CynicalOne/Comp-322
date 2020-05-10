@@ -9,4 +9,5 @@ int main(int argc, char *argv[])
 	
 	FILE *logfile = fopen(argv[2], "a+");
 	fprintf(logfile,"Pop %s\n",argv[1]);
+	fclose(logfile);
 }
